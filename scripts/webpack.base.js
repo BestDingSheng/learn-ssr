@@ -19,6 +19,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/main.js'),
   output: {
     filename: '[name].bundle.js',
+    path: path.resolve(__dirname, '../dist')
   },
   module: {
     rules: [
@@ -62,9 +63,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html'),
-    }),
     new VueLoaderPlugin(),
   ],
 };
